@@ -39,6 +39,15 @@
         el.appendChild(list);
     };
 
-    renderList(images, listContainer);
+    const getPageImages = () => {
+        const images = document.body.getElementsByTagName('img');
+        const imagesSources = Array.from(images).map((image) => image.src);
+        return imagesSources;
+    };
+
+    chrome.tabs.executeScript({ code: `(${getPageImages})();` }, (results) => {
+        images = results[0];
+        renderList(results[0], listContainer);
+    });
 
 })();
