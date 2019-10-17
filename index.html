@@ -8,16 +8,25 @@
     <title>Extension title</title>
 
     <style>
+        body {
+            margin: 0;
+        }
+
         #app {
             width: 250px;
             padding: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
 
+        #list-container {
+            text-align: center;
+        }
+
         .list {
             display: grid;
             grid-gap: 10px;
             grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: max-content;
             height: 240px;
             overflow: auto;
         }
