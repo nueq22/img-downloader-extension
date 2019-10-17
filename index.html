@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Extension title</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #app {
+            width: 250px;
+            padding: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        #list-container {
+            text-align: center;
+        }
+
+        .list {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: max-content;
+            height: 240px;
+            overflow: auto;
+        }
+
+        .list__item {
+            width: 50px;
+            height: 50px;
+            background: #eee;
+        }
+
+        .list__item a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .list__item img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .button {
+            width: 100%;
+            padding: 10px;
+            background: #212121;
+            color: #fafafa;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        #download-all-btn {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="list-container">
+            No images on this page
+        </div>
+        <button class="button" id="download-all-btn">
+            Download all
+        </button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

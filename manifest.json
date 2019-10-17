@@ -1,0 +1,16 @@
+{
+    "name": "Image Downloader",
+    "version": "0.1",
+    "description": "The best extension for scrapping images from page",
+    "manifest_version": 2,
+    "icons": {
+      "128": "kitty.png"
+    },
+    "browser_action": {
+      "default_icon": "kitty.png",
+      "default_popup": "index.html"
+    },
+    "permissions": [
+      "activeTab"
+    ]
+  }
